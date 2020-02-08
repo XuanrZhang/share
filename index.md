@@ -11,7 +11,14 @@ Tips:
 1.If you run FastQC with Linux command, run with file names; otherwise it will print errors
 
 ![Image](/1.png)
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+### Cutadapt
+- Search for standard adapter sequence.
+
+
+- Run with -a parameter
+
+
 
 ```markdown
 Syntax highlighted code block
