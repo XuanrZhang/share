@@ -5,6 +5,10 @@ Aim: conduct research on miRNA
 Data: from EBL 
 
 ### FastQC / Fastp
+Deal with miRNA sequence, Fastp tool can not detect adapters, which can be detected by FastQC. Here is an example.
+
+Tips:
+1.If you run FastQC with Linux command, run with file names; otherwise it will print errors
 
 ![Image](/1.png)
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
@@ -12,12 +16,11 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 ```markdown
 Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+### Cutadapt
+- Search for standard adapter sequence.
 
-- Bulleted
-- List
+
+- Run with -a parameter
 
 1. Numbered
 2. List
