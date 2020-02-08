@@ -1,10 +1,10 @@
-## How to preprocess miRNA-seq with FastQC and cutadapt
+# How to preprocess miRNA-seq with FastQC and cutadapt
 
 Aim: conduct research on miRNA 
 
 Data: from EBL 
 
-### FastQC / Fastp
+## FastQC / Fastp
 Deal with miRNA sequence, Fastp tool can not detect adapters, which can be detected by FastQC. Here is an example.
 
 Tips:
@@ -12,7 +12,7 @@ Tips:
 
 ![Image](/1.png)
 
-### Cutadapt
+## Cutadapt
 - Search for standard adapter sequence.
 
 
