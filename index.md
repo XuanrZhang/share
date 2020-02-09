@@ -6,7 +6,7 @@ Data: SRR .fastq directly from EBI
 
 The data also can be downloaded from NCBI-SRA, followed by type transform (from .SRA to .fasta/fastq); or Download with SRAtools.
 
-[https://www.jianshu.com/p/cf0a7b937413]Reference
+[https://www.jianshu.com/p/cf0a7b937413](Reference)
 
 ## FastQC / Fastp
 Deal with miRNA sequence, Fastp tool can not detect adapters, which can be detected by FastQC. Here is an example.
@@ -17,7 +17,26 @@ Tips:
 ![Image](/1.png)
 
 ## Cutadapt
-- Search for standard adapter sequence.
+- Search for standard adapter sequence, [http://www.eurofinsgenomics.eu/media/1610545/illumina-adapter-sequences.pdf]Here is Illumina Adapter Sequence.
+
+"TruSeq Small RNA"
+
+1.RNA 5’ Adapter (RA5): 
+5’ GUUCAGAGUUCUACAGUCCGACGAUC
+
+2.**RNA 3’ Adapter (RA3)**: 
+5’ TGGAATTCTCGGGTGCCAAGG
+
+3.Stop Oligo (STP): 
+5’ GAAUUCCACCACGUUCCCGUGG
+
+4.RNA RT Primer (RTP): 
+5’ GCCTTGGCACCCGAGAATTCCA
+
+5.RNA PCR Primer (RP1): 
+5’ AATGATACGGCGACCACCGAGATCTACACGTTCAGAGTTCTACAGTCCGA
+
+
 
 
 - Run with -a parameter
