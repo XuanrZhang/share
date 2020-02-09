@@ -2,9 +2,11 @@
 
 Aim: conduct research on miRNA 
 
-Data: SRR .fastq directly from EBL 
+Data: SRR .fastq directly from EBI 
 
 The data also can be downloaded from NCBI-SRA, followed by type transform (from .SRA to .fasta/fastq); or Download with SRAtools.
+
+[Reference]https://www.jianshu.com/p/cf0a7b937413
 
 ## FastQC / Fastp
 Deal with miRNA sequence, Fastp tool can not detect adapters, which can be detected by FastQC. Here is an example.
