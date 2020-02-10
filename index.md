@@ -2,7 +2,7 @@
 
 Aim: conduct research on miRNA 
 
-Data: SRR .fastq directly from EBI 
+Data: SRR5233942 .fastq directly from EBI 
 
 The data also can be downloaded from NCBI-SRA, followed by type transform (from .SRA to .fasta/fastq); or Download with SRAtools.
 
@@ -36,12 +36,18 @@ Tips:
 5.RNA PCR Primer (RP1): 
 5’ AATGATACGGCGACCACCGAGATCTACACGTTCAGAGTTCTACAGTCCGA
 
+- Run [Cutadapt](https://cutadapt.readthedocs.io/en/stable/guide.html) with -a parameter : (cutadapt -a TGGAATTCTCGGGTGCCAAGG -o SRR5233942_cut.fastq SRR5233942.fastq )
 
+Tips:
+If there is multiple adapters, user can provide a Fasta file with -fileg file:barcodes.fasta.
 
+- After adapter cut, all reads are received. so need to Fliter:
 
-- Run with -a parameter
+-m LENGTH: Discard processed reads that are shorter than LENGTH.
 
+-M LENGTH: Discard processed reads that are larger than LENGTH.
 
+--untrimmed-output FILE: Write all reads without adapters to FILE (in FASTA/FASTQ format) instead of writing them to the regular output file.
 
 ```markdown
 Syntax highlighted code block
