@@ -11,8 +11,7 @@ The data also can be downloaded from NCBI-SRA, followed by type transform (from 
 ## FastQC / Fastp
 Deal with miRNA sequence, Fastp tool can not detect adapters, which can be detected by FastQC. Here is an example.
 
-Tips:
-1.If you run FastQC with Linux command, run with file names; otherwise it will print errors
+Tips: 1.If you run FastQC with Linux command, run with file names; otherwise it will print errors
 
 ![Image](/1.png)
 
@@ -38,19 +37,19 @@ Tips:
 
 - Run [Cutadapt](https://cutadapt.readthedocs.io/en/stable/guide.html) with -a parameter : (cutadapt -a TGGAATTCTCGGGTGCCAAGG -o SRR5233942_cut.fastq SRR5233942.fastq) **Recommand!**
 
-Tips:
-If there is multiple adapters, user can provide a Fasta file with "-g file:barcodes.fasta". 
-**While** in my test, with -g parameter, confused results are obtained.
+>Tips: If there is multiple adapters, user can provide a Fasta file with "-g file:barcodes.fasta". 
+>**While** in my test, with -g parameter, confused results are obtained.
 
 - After adapter cut, all reads are received. so need to Fliter:
 
-**-m LENGTH**: Discard processed reads that are shorter than LENGTH.
+>**-m LENGTH**: Discard processed reads that are shorter than LENGTH.
 
--M LENGTH: Discard processed reads that are larger than LENGTH.
+>-M LENGTH: Discard processed reads that are larger than LENGTH.
 
-**--untrimmed-output FILE**: Write all reads without adapters to FILE (in FASTA/FASTQ format) instead of writing them to the regular output file.
+>**--untrimmed-output FILE**: Write all reads without adapters to FILE (in FASTA/FASTQ format) instead of writing them to the regular output file.
 
-```cutadapt shell script
+###cutadapt shell script
+```
 cutadapt -a TGGAATTCTCGGGTGCCAAGG --untrimmed-output untrimmed.out -o out.fastq SRR5233942.fastq 
 cutadapt -a TATGGAGTTCTACAGTCCGACGATCTA --untrimmed-output untrimmed.out -o out-2.fastq out.fastq
 ```
