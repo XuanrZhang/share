@@ -36,18 +36,21 @@ Tips:
 5.RNA PCR Primer (RP1): 
 5’ AATGATACGGCGACCACCGAGATCTACACGTTCAGAGTTCTACAGTCCGA
 
-- Run [Cutadapt](https://cutadapt.readthedocs.io/en/stable/guide.html) with -a parameter : (cutadapt -a TGGAATTCTCGGGTGCCAAGG -o SRR5233942_cut.fastq SRR5233942.fastq )
+- Run [Cutadapt](https://cutadapt.readthedocs.io/en/stable/guide.html) with -a parameter : (cutadapt -a TGGAATTCTCGGGTGCCAAGG -o SRR5233942_cut.fastq SRR5233942.fastq) **Recommand!**
 
 Tips:
-If there is multiple adapters, user can provide a Fasta file with -fileg file:barcodes.fasta.
+If there is multiple adapters, user can provide a Fasta file with "-g file:barcodes.fasta". 
+**While** in my test, with -g parameter, confused results are obtained.
 
 - After adapter cut, all reads are received. so need to Fliter:
 
--m LENGTH: Discard processed reads that are shorter than LENGTH.
+**-m LENGTH**: Discard processed reads that are shorter than LENGTH.
 
 -M LENGTH: Discard processed reads that are larger than LENGTH.
 
---untrimmed-output FILE: Write all reads without adapters to FILE (in FASTA/FASTQ format) instead of writing them to the regular output file.
+**--untrimmed-output FILE**: Write all reads without adapters to FILE (in FASTA/FASTQ format) instead of writing them to the regular output file.
+
+'''cutadapt shell script
 
 ```markdown
 Syntax highlighted code block
