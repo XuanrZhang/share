@@ -50,7 +50,11 @@ If there is multiple adapters, user can provide a Fasta file with "-g file:barco
 
 **--untrimmed-output FILE**: Write all reads without adapters to FILE (in FASTA/FASTQ format) instead of writing them to the regular output file.
 
-'''cutadapt shell script
+cutadapt shell script
+‘’‘
+cutadapt -a TGGAATTCTCGGGTGCCAAGG --untrimmed-output untrimmed.out -o out.fastq SRR5233942.fastq 
+cutadapt -a TATGGAGTTCTACAGTCCGACGATCTA --untrimmed-output untrimmed.out -o out-2.fastq out.fastq
+‘’‘
 
 ```markdown
 Syntax highlighted code block
